@@ -24,3 +24,11 @@ PushBird.getSubscription().then(function(subscriberId) {
     }
 });
 ```
+
+### subscribe
+Promps the visitor to subscribe to push notifications. When the visitor is already subscribed the manage subscription window is displayed.
+
+#### Example:
+```
+<a href="javascript:PushBird.subscribe()">Subscribe</a>
+```
