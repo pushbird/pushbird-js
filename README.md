@@ -13,11 +13,11 @@ The function will return a promise which will resolve with the subscription ID o
 
 #### Example:
 ```
-PushBird.getSubscription().then(function(subscriberId) {
-    console.log('Got subscriber ID', subscriberId)
+PushBird.getSubscription().then(function(subscriptionId) {
+    console.log('Got subscription ID', subscriptionId)
 }, function (reason) {
     if (reason === 'messaging/permission-blocked')
-        console.log('User has blocked notifications');
+        console.log('Visitor has blocked notifications');
     }
     else {
         console.log('An error occurred', reason);
