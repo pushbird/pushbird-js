@@ -3,9 +3,15 @@ The PushBird JS allows you to invite visitors to subscribe to push notifications
 
 You can create your own PushBird account [here](https://dashboard.pushbird.com/register)
 
+## JavaScript API
+When properly installed, the PushBird JS will be accessible from JavaScript.
 
+### getSubscription
+Get the subscription ID from the current visitor. When the visitor has not yet allowed push notifications, the permission will be prompted to the user and when allowed the subscription ID will be returned.
 
+The function will return a promise which will resolve with the subscription ID or rejects when permission are blocked or an error occurs.
 
+#### Example:
 ```
 PushBird.getSubscription().then(function(subscriberId) {
     console.log('Got subscriber ID', subscriberId)
